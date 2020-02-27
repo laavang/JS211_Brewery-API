@@ -1,0 +1,25 @@
+{
+  "name": "js211_brewery-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "browserify": "^16.5.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laavang/JS211_Brewery-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laavang/JS211_Brewery-API/issues"
+  },
+  "homepage": "https://github.com/laavang/JS211_Brewery-API#readme"
+}
