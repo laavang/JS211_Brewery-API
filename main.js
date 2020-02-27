@@ -1,22 +1,10 @@
-const env = require('dotenv').config();
+window.onload = (e) => {
+  const dotenv = require('dotenv').config();
+  
+  const apiKey = process.env.API_KEY
+  console.log(apiKey);
 
-const result = dotenv.config();
- 
-if (result.error) {
-  throw result.error
-}
-
-// console.log(result.parsed);
-console.log(env);
-
-// // const api = require('api')
-// // api.connect({
-// //   API_KEY: process.env.API_KEY
-// // })
-
-
-
-fetch('https://sandbox-api.brewerydb.com/v2/locations/?key='+API_KEY)
+  fetch('https://sandbox-api.brewerydb.com/v2/locations/?key='+apiKey)
   .then((response) => {
     return response.json();
   })
@@ -26,12 +14,18 @@ fetch('https://sandbox-api.brewerydb.com/v2/locations/?key='+API_KEY)
 
 
 
-navigator.geolocation.getCurrentPosition(function(position) {
+  navigator.geolocation.getCurrentPosition(function(position) {
 
-  const latitude  = position.coords.latitude;
-  const longitude = position.coords.longitude;
+    const latitude  = position.coords.latitude;
+    const longitude = position.coords.longitude;
 
-  console.log(latitude, longitude);
-}
-);
+    console.log(latitude, longitude);
+  }
+  );
+  
+};
+
+
+
+
 
