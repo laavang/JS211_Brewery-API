@@ -1,19 +1,7 @@
 window.onload = (e) => {
-  require('dotenv').config();
-  
-  console.log(Object.keys(process.env));
-  const apiKey = process.env.API_KEY
-  console.log(apiKey);
 
-  fetch('https://sandbox-api.brewerydb.com/v2/locations/?key='+apiKey)
-  .then((response) => {
-    return response.json();
-  })
-  .then((myJson) => {
-    console.log(myJson);
-  });
-
-
+  const apiKeyVault = require('./api.json');
+  console.log(apiKeyVault.API_KEY);
 
   navigator.geolocation.getCurrentPosition(function(position) {
 
@@ -23,6 +11,16 @@ window.onload = (e) => {
     console.log(latitude, longitude);
   }
   );
+
+
+  fetch('https://sandbox-api.brewerydb.com/v2/search/geo/point/?lat='+latitude+'lng='+longitude+'key='+apiKeyVault.API_KEY)
+  .then((response) => {
+    return response.json();
+  })
+  .then((myJson) => {
+    console.log(myJson);
+  });
+
   
 };
 
