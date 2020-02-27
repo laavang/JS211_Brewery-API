@@ -1,6 +1,7 @@
 window.onload = (e) => {
-  const dotenv = require('dotenv').config();
+  require('dotenv').config();
   
+  console.log(Object.keys(process.env));
   const apiKey = process.env.API_KEY
   console.log(apiKey);
 
