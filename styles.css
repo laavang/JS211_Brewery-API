@@ -1,0 +1,24 @@
+#breweries > div {
+    border: 1px solid black;
+    width: 50%;
+    padding: 10px 30px 20px 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+#breweries {
+    margin-top: 40px;
+}
+
+body {
+    margin: 10%;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Oswald';
+}
+
